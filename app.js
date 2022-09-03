@@ -16,32 +16,32 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static('public'));
 
 // Esto se renderiza con Handlebars
-app.get('/', (req, res) => {
-    res.render('home', {
-        nombre: 'Fernando Herrera',
-        titulo: 'Curso de Node'
-    });
-});
+// app.get('/', (req, res) => {
+//     res.render('home', {
+//         nombre: 'Fernando Herrera',
+//         titulo: 'Curso de Node'
+//     });
+// });
 
 // Ruta 2
-app.get('/generic', (req, res) => {
-    res.render('generic', {
-        nombre: 'Fernando Herrera',
-        titulo: 'Curso de Node'
-    });
-});
+// app.get('/generic', (req, res) => {
+//     res.render('generic', {
+//         nombre: 'Fernando Herrera',
+//         titulo: 'Curso de Node'
+//     });
+// });
 
-// Ruta 2
-app.get('/elements', (req, res) => {
-    res.render('elements', {
-        nombre: 'Fernando Herrera',
-        titulo: 'Curso de Node'
-    });
-});
+// // Ruta 2
+// app.get('/elements', (req, res) => {
+//     res.render('elements', {
+//         nombre: 'Fernando Herrera',
+//         titulo: 'Curso de Node'
+//     });
+// });
 
 // Ruta 3
 app.get('*', (req, res) => {
-    res.sendFile(__dirname + '/public/404.html')
+    res.sendFile(__dirname + '/public/index.html')
 });
 
 app.listen(port, () => {
